@@ -9,7 +9,7 @@ export default function Hero({ name, role }: HeroProps) {
   return (
     <section
       id="inicio"
-      className="h-[200px] w-full max-w-5xl flex flex-col justify-center items-center text-center gap-6"
+      className="h-[350px] w-full max-w-5xl flex flex-col justify-center items-center text-center gap-6"
     >
       <h1 className="text-5xl font-bold">{name}</h1>
       <p className="mt-2 text-xl text-gray-600">{role}</p>

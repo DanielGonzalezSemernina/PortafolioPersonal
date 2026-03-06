@@ -13,11 +13,14 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
+    // Inicializamos activeSection en inicio al cargar la página
+    setActiveSection("inicio");
+
     // Manejo del scroll para sombra
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
 
-    // Scroll spy
+    // Scroll spy con rootMargin para altura del navbar
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,7 +30,7 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.6, rootMargin: "-100px 0px 0px 0px" } // 100px = altura navbar
     );
 
     links.forEach((link) => {
@@ -46,9 +49,14 @@ export default function Navbar() {
     const targetId = href.substring(1);
     const el = document.getElementById(targetId);
     if (el) {
-      const offset = 100; // Ajusta según la altura de tu navbar
+      const offset = 100; // altura navbar
       const top = el.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: "smooth" });
+
+      // Marca inmediatamente el enlace activo
+      setActiveSection(targetId);
+
+      // Actualiza la URL
       history.replaceState(null, "", `#${targetId}`);
     }
   };
@@ -67,7 +75,11 @@ export default function Navbar() {
             after:content-[''] after:block after:w-0 after:h-1.5
             after:rounded after:mt-2 after:transition-all after:duration-300
             hover:after:w-full
-            ${activeSection === link.href.substring(1) ? "after:w-full after:bg-blue-600" : "after:bg-gray-300"}`}
+            ${
+              activeSection === link.href.substring(1)
+                ? "after:w-full after:bg-blue-600"
+                : "after:bg-gray-300"
+            }`}
         >
           {link.label}
         </a>
