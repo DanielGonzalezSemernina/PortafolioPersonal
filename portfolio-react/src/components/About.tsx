@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="h-[300px] w-full max-w-5xl flex flex-col justify-center items-center text-center"
+      className="h-[400px] w-full max-w-5xl flex flex-col justify-center items-center text-center"
     >
       <h2 className="text-6xl font-bold mb-6">Sobre mí</h2>
 
