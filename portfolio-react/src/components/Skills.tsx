@@ -32,7 +32,7 @@ const [animatedStars, setAnimatedStars] = useState<number[][]>([]);
     const initialStars = skills.map(() => Array(5).fill(0));
     setAnimatedStars(initialStars);
 
-    skills.forEach((skill, skillIndex) => {
+    skills.forEach((_skill, skillIndex) => {
       for (let i = 0; i < 5; i++) {
         setTimeout(() => {
           setAnimatedStars((prev) => {

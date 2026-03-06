@@ -41,7 +41,7 @@ export default function Navbar() {
     };
   }, []);
 
-  const handleClick = (e, href) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.substring(1);
     const el = document.getElementById(targetId);
