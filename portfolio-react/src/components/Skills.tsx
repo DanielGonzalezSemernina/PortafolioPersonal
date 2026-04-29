@@ -9,10 +9,10 @@ interface Skill {
 
 export default function Skills() {
   const skills: Skill[] = [
-    { name: "React", img: "react.png", level: 3.5 },
-    { name: "TypeScript", img: "typescript.png", level: 2.5 },
+    { name: "React", img: "react.png", level: 4 },
+    { name: "TypeScript", img: "typescript.png", level: 3 },
     { name: "Java", img: "java.png", level: 4 },
-    { name: "JavaScript", img: "javascript.png", level: 3.5 },
+    { name: "JavaScript", img: "javascript.png", level: 4 },
     { name: "HTML5", img: "html.png", level: 3 },
     { name: "CSS3", img: "css.png", level: 4.5 },
     { name: "Python", img: "python.png", level: 2.5 },
