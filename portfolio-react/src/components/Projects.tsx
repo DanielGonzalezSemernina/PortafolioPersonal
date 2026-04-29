@@ -51,6 +51,7 @@ export default function Projects() {
       image: plantillaImg,
       technologies: ["React", "Framer Motion", "JavaScript", "i18n"],
       github: "https://github.com/DanielGonzalezSemernina/PlantillaReact",
+      website: "https://danielgonzalezsemernina.github.io/PlantillaReact"
     }
   ];
 
