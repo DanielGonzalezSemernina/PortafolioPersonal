@@ -1,6 +1,7 @@
 import mathRaceImg from "../assets/mathrace.jpg";
 import portafolioImg from "../assets/portafolio.png";
 import practicasImg from "../assets/practicasreact.jpg";
+import plantillaImg from "../assets/plantillareact.png";
 
 interface Project {
   title: string;
@@ -40,9 +41,17 @@ export default function Projects() {
       title: "Página prácticas escolares",
       description: "Página web realizada durante mis prácticas escolares en la empresa Data For Success",
       image: practicasImg,
-      technologies: ["React", "JavaScript","Styled Components"],
+      technologies: ["React", "JavaScript", "Styled Components"],
       github: "https://github.com/DanielGonzalezSemernina/practicasreact",
     },
+    {
+      title: "Plantilla React (i18n + Framer Motion)",
+      description:
+        "Plantilla moderna con React, animaciones con Framer Motion, JavaScript e internacionalización con i18n.",
+      image: plantillaImg,
+      technologies: ["React", "Framer Motion", "JavaScript", "i18n"],
+      github: "https://github.com/DanielGonzalezSemernina/PlantillaReact",
+    }
   ];
 
   return (
